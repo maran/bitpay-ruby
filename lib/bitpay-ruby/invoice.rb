@@ -24,7 +24,6 @@ module BitPayRuby
     end
 
     def create
-      puts @options
       response = BitPayRuby::connection.post "/api/invoice", {
         "price" => price,
         "currency" => currency,
