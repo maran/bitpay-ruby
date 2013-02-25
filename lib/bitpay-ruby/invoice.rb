@@ -17,16 +17,18 @@ module BitPayRuby
       :expirationTime,
       :currentTime
 
-    def initialize price, currency
+    def initialize(price, currency, options = {})
       @price = price
       @currency = currency
+      @options = options.reject{|opt| !BitPayRuby::VALID_OPTIONS.include?(opt)}
     end
 
     def create
+      puts @options
       response = BitPayRuby::connection.post "/api/invoice", {
         "price" => price,
-        "currency" => currency
-      }
+        "currency" => currency,
+      }.reverse_merge(@options)
       update! response.body
       self
     end

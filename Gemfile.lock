@@ -4,8 +4,7 @@ PATH
     bitpay-ruby (0.1.0)
       faraday (~> 0.8.4)
       log4r (~> 1.1.10)
-      sinatra (~> 1.3.3)
-      webrick (~> 1.3.1)
+      sinatra
 
 GEM
   remote: http://rubygems.org/
@@ -14,16 +13,15 @@ GEM
       multipart-post (~> 1.1)
     log4r (1.1.10)
     multipart-post (1.1.5)
-    rack (1.4.1)
-    rack-protection (1.2.0)
-      rack
+    rack (1.2.8)
     rake (10.0.0)
-    tilt (1.3.3)
-    webrick (1.3.1)
+    sinatra (1.0)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bitpay-ruby!
+  rack (= 1.2.8)
   rake (~> 10.0.0)

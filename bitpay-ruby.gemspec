@@ -21,9 +21,8 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "log4r", "~> 1.1.10"
   s.add_runtime_dependency "faraday", "~> 0.8.4"
-  s.add_runtime_dependency "sinatra", "~> 1.3.3"
-  s.add_runtime_dependency "webrick", "~> 1.3.1"
   s.add_development_dependency "rake", "~> 10.0.0"
+
   case RUBY_PLATFORM.downcase
   when "java"
   else

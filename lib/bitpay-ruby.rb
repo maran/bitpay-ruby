@@ -4,6 +4,8 @@ require "yaml"
 require "faraday"
 
 module BitPayRuby
+  VALID_OPTIONS = [:posData, :notificationURL, :transactionSpeed, :fullNotifications, :redirectURL, :notificationEmail, :orderID, :itemDesc, :itemCode]
+
   class BitPayRubyError < StandardError
   end
 

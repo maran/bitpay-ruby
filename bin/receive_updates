@@ -49,8 +49,8 @@ begin
     :Port => 8443,
     :SSLEnable => true,
     :SSLVerifyClient => OpenSSL::SSL::VERIFY_NONE,
-    :SSLCertificate => OpenSSL::X509::Certificate.new(File.open("./config/ssl-cert.pem").read),
-    :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open("./config/ssl-key.pem").read),
+    :SSLCertificate => OpenSSL::X509::Certificate.new(File.open("../config/ssl-cert.pem").read),
+    :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open("../config/ssl-key.pem").read),
     :SSLCertName => [ [ "CN",WEBrick::Utils::getservername ] ],
     :app => App
   }
